@@ -11,7 +11,6 @@ require_once("model/AccountStorageMySQL.php");
 require_once("model/AccountStorageStub.php");
 require_once("lib/ObjectFileDB.php");
 require_once("Router.php");
-require_once('mysql_config2.php');
 require_once("model/CommentStorageMySQL.php");
 
 error_reporting(E_ALL);
