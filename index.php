@@ -15,8 +15,8 @@ require_once('mysql_config2.php');
 require_once("model/CommentStorageMySQL.php");
 
 
-$file = "database.txt";
-$db = new ObjectFileDB($file);
+//$file = "database.txt";
+//$db = new ObjectFileDB($file);
 $pdo= new PDO("mysql:host=".Config::MYSQL_HOST.";port=".Config::MYSQL_PORT.";dbname=".Config::MYSQL_DB.";charset=utf8mb4", Config::MYSQL_USER , Config::MYSQL_PASSWORD);
 
 
