@@ -13,13 +13,14 @@ require_once("lib/ObjectFileDB.php");
 require_once("Router.php");
 require_once('mysql_config2.php');
 require_once("model/CommentStorageMySQL.php");
+$env = parse_ini_file('.env');
 
 
 //$file = "database.txt";
 //$db = new ObjectFileDB($file);
 //$pdo= new PDO("mysql:host=".Config::MYSQL_HOST.";port=".Config::MYSQL_PORT.";dbname=".Config::MYSQL_DB.";charset=utf8mb4", Config::MYSQL_USER , Config::MYSQL_PASSWORD);
-$pdo= new PDO("mysql:host=".$MYSQLHOST.";port=".$MYSQLPORT.";dbname=".$MYSQLDATABASE.";charset=utf8mb4", $MYSQLUSER , $MYSQLPASSWORD);
-var_dump("hello");
+$pdo= new PDO("mysql:host=".$env["MYSQLHOST"].";port=".$env["MYSQLPORT"].";dbname=".$env["MYSQLDATABASE"].";charset=utf8mb4", $env["MYSQLUSER"] , $env["MYSQLPASSWORD"]);
+
 
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 $router = new Router(new PlaceStorageMySQL($pdo), new AccountStorageMySQL($pdo), new CommentStorageMySQL($pdo));
