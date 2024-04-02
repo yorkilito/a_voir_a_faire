@@ -13,7 +13,7 @@ require_once("lib/ObjectFileDB.php");
 require_once("Router.php");
 require_once('mysql_config2.php');
 require_once("model/CommentStorageMySQL.php");
-$env = parse_ini_file('.env');
+//$env = parse_ini_file('.env');
 
 
 //$file = "database.txt";
