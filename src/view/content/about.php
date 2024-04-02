@@ -2,7 +2,7 @@
 <div>
     <img class="profile" src="./style/img/profile.png" alt="Picture Of Developer">
 </div>
-<h3>Salut, je m'appelle Samuel Yorke Aidoo...</h3>
+<b><h3>Salut, je m'appelle Samuel Yorke Aidoo...</h3></b>
 <h3>À PROPOS DE CE PROJET</h3>
 <p>
 Ce projet est un concept de site Web touristique géré par la communauté. Il permet aux utilisateurs de créer des profils et d'ajouter des sites touristiques qu'ils ont visités dans le passé.
@@ -24,7 +24,7 @@ Les visiteurs de ce site sans compte ne peuvent consulter qu'une liste des sites
 <p>
 Ce site Web a été créé en utilisant le modèle MVC.
 
-Vous pouvez consulter le code sur ce dépôt Github :
+Vous pouvez consulter le code sur ce dépôt Github : <a href="https://github.com/yorkilito/a_voir_a_faire">https://github.com/yorkilito/a_voir_a_faire</a>
 
 Il a été codé en PHP et stylisé avec CSS. La base de données de ce site Web est stockée sur un serveur MySQL.
 </p>
@@ -40,8 +40,16 @@ GitHub : <a href="https://github.com/yorkilito">https://github.com/yorkilito</a
 </p>
 
 
-<h3 id="rapport" >Rapport</h3>
-Vous pouvez télécharger notre rapport en utilisant <a href="rapport/rapport.pdf" download="rapport_avaf">ce lien</a>
+<h3 id="rapport" >RAPPORT</h3>
+A technical report of this project will soon be added to this website.
+
+<h3 id="rapport" >MISES À JOUR DES VERSIONS</h3>
+Les futures mises à jour des versions de ce projet incluront :
+<ul>
+    <li>Une mise à jour des sections de commentaires</li>
+    <li>Meilleure localisation des sites touristiques sur GPS.</li>
+</ul>
+
 
 
 <div class= "space"></div>
