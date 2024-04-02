@@ -17,7 +17,8 @@ require_once("model/CommentStorageMySQL.php");
 
 //$file = "database.txt";
 //$db = new ObjectFileDB($file);
-$pdo= new PDO("mysql:host=".Config::MYSQL_HOST.";port=".Config::MYSQL_PORT.";dbname=".Config::MYSQL_DB.";charset=utf8mb4", Config::MYSQL_USER , Config::MYSQL_PASSWORD);
+//$pdo= new PDO("mysql:host=".Config::MYSQL_HOST.";port=".Config::MYSQL_PORT.";dbname=".Config::MYSQL_DB.";charset=utf8mb4", Config::MYSQL_USER , Config::MYSQL_PASSWORD);
+$pdo= new PDO("mysql:host=".Config::MYSQLHOST.";port=".Config::MYSQLPORT.";dbname=".Config::MYSQLDATABASE.";charset=utf8mb4", Config::MYSQLUSER , Config::MYSQLPASSWORD);
 
 
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
