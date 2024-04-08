@@ -1,7 +1,4 @@
 <h1><?= $this->title?></h1>
-<div>
-    <img class="profile" src="./style/img/profile.png" alt="Picture Of Developer">
-</div>
 <b><h3>Salut, je m'appelle Samuel Yorke Aidoo...</h3></b>
 <h3>À PROPOS DE CE PROJET</h3>
 <p>
@@ -40,8 +37,8 @@ GitHub : <a href="https://github.com/yorkilito">https://github.com/yorkilito</a
 </p>
 
 
-<h3 id="rapport" >RAPPORT</h3>
-A technical report of this project will soon be added to this website.
+<h3 id="rapport" >DOCUMENTATION</h3>
+Vous pouvez consulter la documentation de ce projet <a href="./README.md"> ici</a>
 
 <h3 id="rapport" >MISES À JOUR DES VERSIONS</h3>
 Les futures mises à jour des versions de ce projet incluront :
