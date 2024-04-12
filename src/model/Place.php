@@ -61,6 +61,43 @@
             return $this->author;
         }
 
+        
+
+        public function getPlaceCoordinates(){
+            $coordinates = "";
+            $address_formatted = str_replace(' ', '+', $this->getAdresse());
+            $codePostal = $this->getCode();
+            $url = "https://api-adresse.data.gouv.fr/search/?q=$address_formatted&postcode=$codePostal"; 
+            $curl = curl_init();
+            curl_setopt_array($curl, [
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_URL => $url,
+                CURLOPT_TIMEOUT => 5,
+                CURLOPT_CUSTOMREQUEST => 'GET',
+                CURLOPT_HEADER => [], 
+                 
+            ]);
+
+            $response = curl_exec($curl);
+            if($error = curl_error($curl)){
+                
+            }else{
+                
+                $decoded_data = json_decode($response, true);
+                
+            }
+
+            curl_close($curl);
+            $coordinates .= strval($decoded_data['features'][0]['geometry']['coordinates'][1]).','.strval($decoded_data['features'][0]['geometry']['coordinates'][0]); 
+
+
+            return $coordinates;
+            
+        }
+
+        
+        
+
         // setters 
 
         public function  setNom($nomEndroit){
@@ -99,6 +136,8 @@
         public function setAuthor($author){
             $this->author=$author;
         }
+
+    
 
     }
 

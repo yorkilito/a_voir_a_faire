@@ -44,7 +44,8 @@ Vous pouvez consulter la documentation de ce projet <a href="./README.md"> ici</
 Les futures mises à jour des versions de ce projet incluront :
 <ul>
     <li>Une mise à jour des sections de commentaires</li>
-    <li>Meilleure localisation des sites touristiques sur GPS.</li>
+    <li>Meilleure localisation des sites touristiques sur GPS. <span class="update_info"> &#9989; Fait le 12, Avril, 2024 (Version 0.2)</span></li>
+    <li>Une page de profils pour chaque utilisateur</li>
 </ul>
 
 

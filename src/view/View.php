@@ -94,36 +94,18 @@ require_once("builder/CommentBuilder.php");
             $this->content = ob_get_clean();
             $this->render();
         }
-        
-        
-        function getGeoCode($address)
-        {
-        $address = str_replace(' ', '+', $address);
-        // geocoding api url
-        $key = "AIzaSyDBe9xj_EUjCRfGeOYcFQtiIuaEnT8Ukhw";
-        $key = urlencode($key);
-        $url = "https://maps.google.com/maps/api/geocode/json?address=$address&key=$key";
-        // send api request
-        $geocode = file_get_contents($url);
-        $json = json_decode($geocode);
-        $data['lat'] = $json->results[0]->geometry->location->lat;
-        $data['lng'] = $json->results[0]->geometry->location->lng;
-        $val = $data['lat'].",".$data['lng'];
-        return $val;
-        }
 
 
-
-
-        public function makeMapPlugin($address){
+        public function makeMapPlugin($coordinates){           
             $str = '';
             $str .= "<div id=\"map\">
             <script>
-                var map = L.map('map').setView([0,0],1);
-                L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=CIMHDkeAuE234cWtrWB4',{
+                var map = L.map('map').setView([$coordinates],17);
+                L.tileLayer('https://api.maptiler.com/maps/streets-v2/{z}/{x}/{y}.png?key=I2GFXF8PVWdsX1I44Mdl',{
                     attribution: '<a href=\"https://www.maptiler.com/copyright/\" target=\"_blank\">&copy; MapTiler</a> <a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\">&copy; OpenStreetMap contributors</a>',
+                    
                 }).addTo(map); 
-                var marker = L.marker([46.2276, 2.213]).addTo(map);
+                var marker = L.marker([$coordinates]).addTo(map);
             </script>
             </div>";
             return $str;

@@ -162,8 +162,6 @@
                 }
             }
         }
-
-
     
         public function displayAbout() {
             $this->view->makeAboutPage();

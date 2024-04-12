@@ -29,11 +29,9 @@
         </div>
         
         <div>
-            <?php
-            //print_r (self::getGeoCode('France'));
-            $address = $place->getAdresse().$place->getVille().$place->getRegion();
-            //print_r($address);
-            echo self::makeMapPlugin($address);
+            <?php        
+            $address = $place->getAdresse().$place->getCode();           
+            echo self::makeMapPlugin($place->getPlaceCoordinates());
             ?>
         </div>    
 
