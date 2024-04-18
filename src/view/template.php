@@ -19,6 +19,8 @@
         <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
         <link rel="stylesheet" href="style/styles.css" />
         <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+  
+ 
     </head>
     <body >
 
@@ -64,23 +66,18 @@
     </main>
 
     <footer class="pied">
-	<nav class="infos">
-		<ul>
-				<li><a href="<?= $this->router->getListURL()?>">Consulter la liste</a></li>
-				<li><a href="<?= $this->router->getAboutURL()?>">À propos</a></li>
-				<li><a href="https://fr.wikipedia.org/wiki/Cookie_(informatique)">Cookies</a></li>
-        <li><a href="https://fr.wikipedia.org/wiki/Conditions_g%C3%A9n%C3%A9rales_d%27utilisation">T's and C's</a></li>
-		</ul>
-	</nav>
-	<nav class="socials">
-		<ul>
-			<li><a href="https://www.facebook.com/"><img src="style/icons/facebook.png" alt="facebook" /></a></li>
-			<li><a href="https://www.instagram.com/"><img src="style/icons/instagram.png" alt="insta" /></a></li>
-			<li><a href="https://www.pinterest.fr/"><img src="style/icons/pinterest.png" alt="pinterest" /></a></li>
-		</ul>
-	</nav>
-  <div class="down">
-  <p>© A.V.A.F, SARL</p>
+	<div class="footer_content">
+    <div>
+    <a href="https://github.com/yorkilito" target="_blank"><img class="github_icon" src="./style/icons/github-mark.svg" alt="Github Logo"></a>
+    </div>
+    <div>
+    <p>
+    © 2024 Samuel Aidoo  
+    <a href="mailto:yorkilito.coder@gmail.com" target="_blank">Contact  </a>
+    <a href="https://yorkilito.crd.co/" target="_blank">Website  </a>
+    <a href="./README.md" target="_blank">Documentation  </a>
+    </p>
+    </div>
   </div>
 </footer>
 
