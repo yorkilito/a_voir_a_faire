@@ -314,6 +314,33 @@ input[type=hidden]{
 	border-radius: 4px;
 }
 
+.home_about_section{
+	padding: 2rem 1rem 2rem 1rem;
+	background-color: #0a6e87;
+	min-height: 7vh;
+	color: white;
+	
+}
+
+.home_about_icons{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+}
+
+.home_about_icons img{
+	width: 8%;
+	height: auto;
+}
+
+/*
+
+.home_section{
+	padding: 1rem;
+}
+
+*/
+
 
 
 /*footer*/
