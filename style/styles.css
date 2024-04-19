@@ -64,6 +64,14 @@ h6{
 .btnContent{
 	text-align: center;
 }
+td, th {
+	border: 2px solid #0a6e87;
+	text-align: left;
+}
+  
+tr:nth-child(even) {
+	background-color: #dddddd;
+}
 
 
 /*header*/
@@ -408,9 +416,37 @@ img.profile{
 	width: 200px;
 }
 
-.update_info{
+.update_info_done{
 	color: green;
 }
 
+.update_info_pending{
+	color: orange;
+}
 
+.update_info_null{
+	color: red;
+}
+
+
+.about_hero_section{
+	padding: 2rem 1rem 2rem 1rem;
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	align-items: center;
+	
+}
+
+.about_hero_section img{
+	max-width: 15rem;
+
+}
+
+.home_about_section a{
+	color: white;
+}
+
+.svg_icons img{
+	min-width: 7rem;
+}
 
