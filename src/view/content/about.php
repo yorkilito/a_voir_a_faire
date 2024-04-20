@@ -37,7 +37,7 @@ Les visiteurs de ce site sans compte ne peuvent consulter qu'une liste des sites
 <p>
 Ce site Web a été créé en utilisant le modèle MVC.
 
-Vous pouvez consulter le code sur <a href="https://github.com/yorkilito/a_voir_a_faire" target="_blank">ce dépôt Github :</a>
+Vous pouvez consulter le code sur <a href="https://github.com/yorkilito/a_voir_a_faire" target="_blank">ce dépôt Github.</a>
 
 Voici les outils et langages utilisés dans la conception de cette application:
 <ul>

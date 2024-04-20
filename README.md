@@ -73,6 +73,7 @@ $pdo= new PDO("mysql:host=".Config::MYSQL_HOST.";port=".Config::MYSQL_PORT.";dbn
 ## Version History:
 * 0.1 : Base Version
 * 0.2 : Improved GPS Localisation
+* 0.3 : Website Redesign
 
 ## License:
 This project is licensed under the MIT License - see the LICENSE.md for details.
