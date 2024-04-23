@@ -82,9 +82,9 @@ if($private){
 }
 ?>
 <?php
-    echo "<div class=\"commentBox\"><h5><b>Commentaires...</b></h5></div>";
+    echo "<div class=\"commentBox\"><h5><b>Commentaires($totalComments)</b></h5></div>";
+    
     foreach($comment as $com){
-        //var_dump($com->getNote());
 
         echo "<div class=\"comment commentBox only\">
         

@@ -106,7 +106,6 @@ require_once("control/AuthenticationManager.php");
                     
                     case "saveUser":
                         $authManager->saveUser($_POST);
-                        //$authManager->connectUser();
                         break;
 
                     case "nouveau":

@@ -22,7 +22,7 @@ require_once ("view/View.php");
             );
         }
 
-        public function makePlacePage($id, $place, $comment){
+        public function makePlacePage($id, $place, $comment, $totalComments){
             $cb = new  CommentBuilder();
             ob_start();
             $this->title = $place->getNom();

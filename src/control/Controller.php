@@ -37,8 +37,10 @@
         public function showInformation($id){
             $place = $this->PlaceStorage->read($id);
             $comment = $this->commentStorage->read($id);
+            $totalComments = $this->commentStorage->countComments($id);
+            //var_dump();
             if ($place !== null) {
-                $this->view->makePlacePage($id, $place, $comment);
+                $this->view->makePlacePage($id, $place, $comment, $totalComments);
             } else {
                 $this->view->makeUnknownplacePage();
             }

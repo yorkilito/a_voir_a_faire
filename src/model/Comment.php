@@ -12,15 +12,15 @@ class Comment{
         $this->comment = $comment;
         $this->note = $note;
         $this->author = $author;
-        //date
         $this->date = new DateTime();
         $this->date = $this->date->format('d/m/Y');
+        /*
         if($date !== null){
             $this->date = $date;
         }else{
             $this->date = new DateTime();
             $this->date = $this->date->format('d/m/Y');
-        }
+        }*/
 
     }
 

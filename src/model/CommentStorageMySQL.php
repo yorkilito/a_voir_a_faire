@@ -37,24 +37,10 @@ class CommentStorageMySQL {
         $stmt->bindValue(":id_val", $id, PDO::PARAM_INT);
         $stmt->execute();
         while(($value = $stmt->fetch())!== false){
-            //print_r ($value);
             $array[$value["id"]] = new Comment($value["placeId"],$value["comment"],$value["note"],$value["author"]);
 
         }
         return $array;
-        /*
-        $value = $stmt->fetch();
-        if($value != null){
-            while(($value = $stmt->fetch())!== false){
-                print_r ($value);
-                $array[$value["id"]] = new Comment($value["placeId"],$value["comment"],$value["note"],$value["author"]);
-  
-            }
-            return $array;
-            
-        }else{
-            return null;
-        }*/
         
     }
 
@@ -70,7 +56,17 @@ class CommentStorageMySQL {
         $req = "INSERT INTO comment (`placeId`,`comment`,`note`, `author`)  VALUES (?,?,?,?)";
         $stmt = $this->db->prepare($req);
         $stmt->execute(array($pl->getPlaceId(),$pl->getComment(), $pl->getNote(), $pl->getAuthor()));
-    }    
+    }   
+    
+
+    public function countComments($id){
+        $req = "SELECT COUNT(*) FROM comment WHERE placeId = :id_val";
+        $stmt = $this->db->prepare($req);
+        $stmt->bindValue(":id_val", $id, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch()[0];
+        
+    }
 
 }
 ?>
