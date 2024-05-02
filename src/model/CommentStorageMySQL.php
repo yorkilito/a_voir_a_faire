@@ -1,6 +1,7 @@
 <?php
 require_once("model/Comment.php");
 
+
 class CommentStorageMySQL {
 
     private $db;
@@ -24,7 +25,7 @@ class CommentStorageMySQL {
         $stmt = $this->db->prepare($rq);
         $stmt->execute();
         while(($value = $stmt->fetch())!== false){
-            $array[$value["id"]] = new Comment($value["placeId"],$value["comment"],$value["note"],$value["author"]);
+            $array[$value["id"]] = new Comment($value["placeId"],$value["comment"],$value["note"],$value["author"],$value["date"]);
             
         }
         return $array;     
@@ -37,7 +38,7 @@ class CommentStorageMySQL {
         $stmt->bindValue(":id_val", $id, PDO::PARAM_INT);
         $stmt->execute();
         while(($value = $stmt->fetch())!== false){
-            $array[$value["id"]] = new Comment($value["placeId"],$value["comment"],$value["note"],$value["author"]);
+            $array[$value["id"]] = new Comment($value["placeId"],$value["comment"],$value["note"],$value["author"],$value["date"]);
 
         }
         return $array;
@@ -53,9 +54,12 @@ class CommentStorageMySQL {
     }
 
     public function create(Comment $pl) {
-        $req = "INSERT INTO comment (`placeId`,`comment`,`note`, `author`)  VALUES (?,?,?,?)";
+        $date = new DateTime();
+        $date = $date->format('D jS \of F y, h:i A');
+        //$date = $date->format(DATE_RFC822);
+        $req = "INSERT INTO comment (`placeId`,`comment`,`note`, `author`, `date`)  VALUES (?,?,?,?,?)";
         $stmt = $this->db->prepare($req);
-        $stmt->execute(array($pl->getPlaceId(),$pl->getComment(), $pl->getNote(), $pl->getAuthor()));
+        $stmt->execute(array($pl->getPlaceId(),$pl->getComment(), $pl->getNote(), $pl->getAuthor(), $date));
     }   
     
 

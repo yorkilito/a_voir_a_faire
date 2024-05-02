@@ -120,8 +120,8 @@ Vous pouvez consulter la documentation de ce projet <a href="./README.md" target
             Il doit également indiquer le nombre total de commentaires. 
             Je vais également essayer d'en faire une liste déroulante pour économiser de l'espace. 
             La date à laquelle les commentaires sont publiés sur ce site doit également être corrigée</td>
-        <td><p class="update_info_pending"> En Cours...</p></td>
-        <td>N/A</td>
+        <td><p class="update_info_done"> &#9989; Fait le 2, Mai, 2024</p></td>
+        <td>0.4</td>
     </tr>
     <tr>
         <td>Page de Profil Utilisateur</td>
@@ -129,7 +129,7 @@ Vous pouvez consulter la documentation de ce projet <a href="./README.md" target
         Pour le moment, les utilisateurs n’ont pas de page de profil. Ils ne peuvent pas non plus consulter les profils des autres utilisateurs. 
         Dans cette mise à jour, je créerai des pages de profil pour tous les utilisateurs qui comprendront une photo, une description et une liste de tous les sites qu'ils ont publiés sur l'application.
         </td>
-        <td><p class="update_info_null"> Pas encore commencé</p></td>
+        <td><p class="update_info_pending"> En cours...</p></td>
         <td>N/A</td>
     </tr>
 </table>

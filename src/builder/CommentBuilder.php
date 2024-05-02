@@ -7,16 +7,20 @@ class CommentBuilder {
 
 
     public function __construct($data = null){
+        $this->date = new DateTime();
+        $this->date = $this->date->format('d/m/Y');
         if ($data === null) {
             $data = array(
                 "placeId" => "",
                 "comment" => "",
                 "note" => "",
                 "author" => "",
+                "date" => $this->date,
             );
         }
         $this->data = $data;
-        $this->error = array();
+        $this->error = array();        
+        //var_dump($this->date);
     }
 
     public function getData($ref) {
@@ -32,7 +36,10 @@ class CommentBuilder {
             $this->data["placeId"],
             $this->data["comment"],
             $this->data["note"],
-            $this->data["author"]
+            $this->data["author"],
+            $this->data["date"],
+            $this->date
+            
 
         );
         return $comment;

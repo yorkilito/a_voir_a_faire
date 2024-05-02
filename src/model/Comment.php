@@ -7,21 +7,12 @@ class Comment{
     protected $author;
     protected $date;
 
-    public function __construct($placeId, $comment, $note, $author, $date = null){
+    public function __construct($placeId, $comment, $note, $author, $date){
         $this->placeId = $placeId;
         $this->comment = $comment;
         $this->note = $note;
         $this->author = $author;
-        $this->date = new DateTime();
-        $this->date = $this->date->format('d/m/Y');
-        /*
-        if($date !== null){
-            $this->date = $date;
-        }else{
-            $this->date = new DateTime();
-            $this->date = $this->date->format('d/m/Y');
-        }*/
-
+        $this->date = $date;
     }
 
     public function getPlaceId(){
@@ -53,7 +44,8 @@ class Comment{
         if($this->date == null){
             return "Il y a longtemps";
         }
-        return $this->date;        
+        return $this->date;   
+             
     }
 
 

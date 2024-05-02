@@ -14,14 +14,14 @@ require_once("lib/ObjectFileDB.php");
 require_once("Router.php");
 require_once("model/CommentStorageMySQL.php");
 
-//error_reporting(E_ALL);
-//ini_set("display_errors", 0);
+error_reporting(E_ALL);
+ini_set("display_errors", 0);
 
 //production connection details
-//$pdo= new PDO("mysql:host=".getenv("MYSQLHOST").";port=".getenv("MYSQLPORT").";dbname=".getenv("MYSQLDATABASE").";charset=utf8mb4", getenv("MYSQLUSER") , getenv("MYSQLPASSWORD"));
+$pdo= new PDO("mysql:host=".getenv("MYSQLHOST").";port=".getenv("MYSQLPORT").";dbname=".getenv("MYSQLDATABASE").";charset=utf8mb4", getenv("MYSQLUSER") , getenv("MYSQLPASSWORD"));
 
 //development connection details
-$pdo= new PDO("mysql:host=".Config::MYSQL_HOST.";port=".Config::MYSQL_PORT.";dbname=".Config::MYSQL_DB.";charset=utf8mb4", Config::MYSQL_USER , Config::MYSQL_PASSWORD);
+//$pdo= new PDO("mysql:host=".Config::MYSQL_HOST.";port=".Config::MYSQL_PORT.";dbname=".Config::MYSQL_DB.";charset=utf8mb4", Config::MYSQL_USER , Config::MYSQL_PASSWORD);
 
 
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

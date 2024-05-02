@@ -61,10 +61,11 @@
 <?php
 if($private){
 
-    echo "<div class=\"commentBox div\"> 
+    echo "<p><h3>Avez-vous déjà visité cet endroit ? Dites au monde ce que vous en pensez!</h3></p>
+    <div class=\" div\"> 
     <form method=\"POST\" action=\"$link\">
 
-    <textarea name=\"comment\" value=\"$cm\" placeholder=\"Ajouter un commentaire..\"></textarea>
+    <textarea name=\"comment\" value=\"$cm\" placeholder=\"Ajouter un commentaire...\"></textarea>
     Avez-vous déjà visité cet endroit? Si oui, notez-le sur 5!
     <select type=\"text\" name=\"note\" >
     <option name=\"note\" value=\"1\">1</option>
@@ -81,18 +82,20 @@ if($private){
 
 }
 ?>
+
 <?php
-    echo "<div class=\"commentBox\"><h5><b>Commentaires($totalComments)</b></h5></div>";
+    echo "<div class=\"comment_section\"><div class=\"comment_header\"><h5>Commentaires ($totalComments)</h5>
+    <img class=\"small_icon\" src=\"./style/icons/dropdown.svg\" alt=\"Dropdown Icon\"></div><div class=\"comment_dropdown\">";
+    
+
     
     foreach($comment as $com){
 
-        echo "<div class=\"comment commentBox only\">
-        
-        <div>
+        echo "<div class=\"comment commentBox\">
+        <div class=\"comment_top_row\">        
         <img src=\"./style/icons/account.png\" alt=\"profile\" style = \"margin-right: 18px;\">
-
-        ".$com->getAuthor()."
-        ".$com->getDate()."</div><div class=\"right\">";        
+        <p>".$com->getAuthor()."</p>
+        <p>".$com->getDate()."</p><div class=\"rating\">";        
         switch($com->getNote()){
             case "1":
                 echo "<span class=\"fa fa-star checked\"></span>
@@ -137,15 +140,14 @@ if($private){
             <span class=\"fa fa-star\"></span>";    
                             
         }
-        echo "</div>";
-        echo "<p> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp". $com->getComment()."</p>";
-
-               
-        echo "
+        echo "</div></div>
+        <div class=\"comment_bottom_row\">
+        <p>". $com->getComment()."</p> 
+        </div>
         </div>";
-
-
     }
+
+    echo "</div></div>";
 
 ?>
 

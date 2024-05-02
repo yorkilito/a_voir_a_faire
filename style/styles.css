@@ -88,13 +88,7 @@ header {
   
 }
 
-.only{
 
-	display: grid;
-    grid-template-columns: 2fr 2fr;
-
-
-}
 
 .container{
     padding-top: 1rem;
@@ -182,24 +176,12 @@ figure {
 	margin-top: 30px;
 }
 
-.commentBox{
-	background-color: lightgray;
-	border: 2px solid #0a6e87;
-	border-bottom: 2px solid lightgray;
-	
-}
-.commentBox textarea{
-	height: 50px;
-	
-}
-
 #post{
 	width: 20%;
+	margin-top: 15px;
 }
 
-.right{
-	text-align: right;
-}
+
 
 .checked {
 	color: orange;
@@ -449,4 +431,84 @@ img.profile{
 .svg_icons img{
 	min-width: 7rem;
 }
+
+
+/*comment section*/
+
+img.small_icon{
+	max-width: 6.5vh;
+}
+
+svg:hover{
+	fill: white;
+}
+
+.comment_header{
+	display: grid;
+	grid-template-columns: 20fr 1fr;
+	align-items: center;
+	border: 2px solid #0a6e87;
+	
+}
+
+.comment_header:hover{
+	display: grid;
+	grid-template-columns: 20fr 1fr;
+	align-items: center;
+	border: 2px solid #0a6e87;
+	background-color: #0a6e87;
+	color: white;
+	
+}
+
+.commentBox textarea{
+	height: 50px;
+	
+}
+
+.commentBox{
+	background-color: lightgray;
+	border: 2px solid #0a6e87;
+	border-top: 0px;
+	display: grid;
+	grid-template-rows: 1fr 2fr;
+}
+
+.comment_top_row{
+	display: grid;
+	gap:0px;
+	grid-template-columns: .5fr 1fr 2fr 5fr;
+	margin-left: 1rem;
+	margin-right: 1rem;
+
+}
+
+.comment_top_row .rating{
+	justify-self: right;
+	
+}
+
+
+.comment_bottom_row{
+	margin-top: 1rem;
+	margin-left: 1rem;
+}
+
+.comment_dropdown{
+	cursor: pointer;
+	max-height: 0;
+	overflow: hidden;
+
+}
+
+.active .comment_dropdown{
+	max-height: 350px;
+	overflow: scroll;
+	border-bottom: 2px solid #0a6e87;
+
+
+}
+
+
+
 
