@@ -84,7 +84,6 @@
         }
 
         public function saveNewComment(array $data){
-            var_dump($data);
             $this->currentComment = new CommentBuilder($data);
             if($this->currentComment->isValid()){
                 $comment = $this->currentComment->createComment();
